@@ -395,7 +395,7 @@ a:hover {
   border-radius: var(--radius-lg);
   object-fit: cover;
   object-position: center 20%;
-  border: 1px solid var(--border-light);
+  border: 2px solid #94A3B8;
   box-shadow: var(--shadow-sm);
   background-color: var(--bg-subtle);
 }
@@ -710,16 +710,23 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  align-items: start;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 820px) {
   .skills-columns {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.5fr 1fr;
   }
 }
 
+.skills-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .skill-block {
-  padding: 18px;
+  padding: 22px;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   background-color: #FFFFFF;
@@ -729,25 +736,63 @@ a:hover {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 10px;
+}
+
+.skill-subsection {
+  margin-bottom: 18px;
+}
+
+.skill-subsection:last-child {
+  margin-bottom: 0;
+}
+
+.skill-subsection-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: -0.01em;
+}
+
+.skill-subsection-title svg {
+  width: 15px;
+  height: 15px;
+  color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .skill-items-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
 }
 
 .skill-item-pill {
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   padding: 4px 10px;
   background-color: var(--bg-subtle);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
   font-weight: 500;
+  transition: all 150ms ease;
+  line-height: 1.4;
+}
+
+.skill-item-pill:hover {
+  background-color: #F1F5F9;
+  border-color: var(--border-hover);
 }
 
 .language-table {
@@ -756,8 +801,13 @@ a:hover {
 }
 
 .language-table td {
-  padding: 6px 0;
+  padding: 8px 0;
   font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.language-table tr:last-child td {
+  border-bottom: none;
 }
 
 .language-table td:last-child {
