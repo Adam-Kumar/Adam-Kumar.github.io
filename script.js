@@ -136,7 +136,7 @@ const I18N = {
 
   ja: {
     // Document Meta
-    'doc.title': 'アダム・クマール (Adam Kumar) — 履歴書・研究業績 (CV)',
+    'doc.title': 'アダム クマール (Adam Kumar) — 履歴書・研究業績 (CV)',
     'doc.desc': '立命館大学大学院 情報理工学研究科 アダム・クマール（Adam Kumar）の研究・学歴・技術経歴書（Curriculum Vitae）。',
 
     // Navigation & Header
