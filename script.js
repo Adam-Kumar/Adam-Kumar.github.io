@@ -152,7 +152,7 @@ const I18N = {
     'nav.toggle_aria': 'Switch to English',
 
     // Hero Section
-    'hero.name': 'アダム・クマール',
+    'hero.name': 'アダム　クマール',
     'hero.affiliation': '大学院生 · 大学院情報理工学研究科',
     'hero.uni': '立命館大学 大阪いばらきキャンパス (OIC)',
     'hero.location': '日本・大阪',
