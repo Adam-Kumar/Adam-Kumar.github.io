@@ -262,30 +262,49 @@ const I18N = {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
   initLanguageToggle();
   initClipboardCopy();
   initContactForm();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
 /**
  * Language Switcher Implementation
  */
+function toggleLanguage() {
+  const nextLang = currentLang === 'en' ? 'ja' : 'en';
+  applyLanguage(nextLang);
+}
+window.toggleLanguage = toggleLanguage;
+
 function initLanguageToggle() {
   const toggleBtn = document.getElementById('lang-toggle-btn');
 
   // Retrieve saved preference or default to English
-  const savedLang = localStorage.getItem('cv_preferred_lang');
+  let savedLang = null;
+  try {
+    savedLang = localStorage.getItem('cv_preferred_lang');
+  } catch (e) {
+    // Storage access may be restricted
+  }
+
   if (savedLang === 'ja' || savedLang === 'en') {
     applyLanguage(savedLang);
   } else {
     applyLanguage('en');
   }
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      const nextLang = currentLang === 'en' ? 'ja' : 'en';
-      applyLanguage(nextLang);
+  if (toggleBtn && !toggleBtn._hasLangListener) {
+    toggleBtn._hasLangListener = true;
+    toggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleLanguage();
     });
   }
 }
