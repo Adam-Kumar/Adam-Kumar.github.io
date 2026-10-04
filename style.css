@@ -174,8 +174,30 @@ a:hover {
 .nav-right-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
+}
+
+.btn-lang-toggle {
+  font-weight: 600;
+  gap: 6px;
+}
+
+.btn-lang-toggle .lang-icon {
+  width: 15px;
+  height: 15px;
+  color: var(--color-primary);
+}
+
+@media (max-width: 520px) {
+  .nav-right-actions {
+    gap: 6px;
+  }
+  .nav-right-actions .btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    gap: 5px;
+  }
 }
 
 /* Buttons */
