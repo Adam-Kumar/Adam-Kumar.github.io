@@ -506,8 +506,20 @@ a:hover {
 .entry-institution {
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 6px;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.entry-location {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.entry-major {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 8px;
 }
 
 .entry-desc {
@@ -822,8 +834,7 @@ a:hover {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   background-color: var(--bg-subtle);
-  max-width: 680px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .message-header {
