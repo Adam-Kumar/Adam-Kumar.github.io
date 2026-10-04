@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adam Kumar — Curriculum Vitae</title>
+  <meta name="description"
+    content="Academic Curriculum Vitae of Adam Kumar, Graduate Student in Information Science and Engineering at Ritsumeikan University (Osaka Ibaraki Campus).">
+  <meta name="author" content="Adam Kumar">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adam Kumar — Curriculum Vitae">
+  <meta property="og:description"
+    content="Graduate Student at Ritsumeikan University (OIC). Machine learning, dataset curation, and automation systems.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="assets/headshot.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#about" class="brand-link" aria-label="Adam Kumar Home">
+        <span class="brand-monogram">AK</span>
+        <span>Adam Kumar</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#awards" class="nav-link">Awards</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills & Languages</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right-actions">
+        <!-- Print CV Button -->
+        <button class="btn btn-secondary" onclick="window.print()" title="Print CV or Save as PDF">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9" />
+            <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+            <rect x="6" y="14" width="12" height="8" />
+          </svg>
+          <span>Print / PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Profile Section
+         ========================================================================== -->
+    <section class="hero" id="about">
+      <div class="container">
+        <div class="hero-layout">
+
+          <div class="hero-info">
+            <h1 class="hero-name">Adam Kumar</h1>
+            <div class="hero-affiliation">
+              Graduate Student · Graduate School of Information Science and Engineering
+            </div>
+
+            <div class="hero-meta">
+              <span class="hero-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                Ritsumeikan University, Osaka Ibaraki Campus (OIC)
+              </span>
+              <span class="hero-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Osaka, Japan
+              </span>
+            </div>
+
+            <p class="hero-summary">
+              Graduate researcher focused on creating and cleaning datasets, designing machine learning and multi-view
+              deep learning models, and building efficient automation systems and scripts.
+            </p>
+
+            <div class="hero-contact-row">
+              <div class="hero-contact-text-group">
+                <span class="hero-contact-text-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  <span>xadamok@gmail.com</span>
+                </span>
+
+                <span class="contact-divider" aria-hidden="true">·</span>
+
+                <span class="hero-contact-text-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path
+                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                  </svg>
+                  <span>+81 70 8387 8692</span>
+                </span>
+              </div>
+
+              <!-- Social Icons Only (GitHub & LinkedIn) -->
+              <div class="hero-social-icons">
+                <a href="https://github.com/Adam-Kumar" target="_blank" rel="noopener noreferrer"
+                  class="social-icon-btn" title="GitHub (Adam-Kumar)" aria-label="GitHub Profile">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2Z" />
+                  </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/in/adam-kumar-197474302/" target="_blank" rel="noopener noreferrer"
+                  class="social-icon-btn" title="LinkedIn (Adam Kumar)" aria-label="LinkedIn Profile">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrapper">
+            <img src="assets/headshot.png" alt="Adam Kumar" class="hero-photo">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Education & Qualifications Section
+         Higher Education first, followed by Secondary Education & International Qualifications
+         ========================================================================== -->
+    <section class="section" id="education">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 class="section-title">Education & Qualifications</h2>
+        </div>
+
+        <!-- 1. Higher Education -->
+        <div class="education-group">
+          <h3 class="group-heading">Higher Education</h3>
+          <div class="entry-list">
+
+            <!-- Master Degree -->
+            <div class="entry-card">
+              <div class="entry-header">
+                <h4 class="entry-title">Master of Engineering</h4>
+                <span class="entry-period">April 2026 – Present (Expected March 2028)</span>
+              </div>
+              <div class="entry-institution">
+                Ritsumeikan University — Graduate School of Information Science and Engineering
+              </div>
+              <p class="entry-desc">
+                Current graduate research focused on dataset engineering, multi-view deep learning architectures, and
+                automated system development at the Osaka Ibaraki Campus (OIC).
+              </p>
+            </div>
+
+            <!-- Bachelor Degree -->
+            <div class="entry-card">
+              <div class="entry-header">
+                <h4 class="entry-title">Bachelor of Engineering</h4>
+                <span class="entry-period">April 2022 – March 2026</span>
+              </div>
+              <div class="entry-institution">
+                Ritsumeikan University — Major in Information Systems Science and Engineering
+              </div>
+              <p class="entry-desc">
+                Comprehensive engineering degree covering computer science, algorithms, neural network design, data
+                structures, and computer vision systems.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2. Secondary Education & International Certifications -->
+        <div class="education-group">
+          <h3 class="group-heading">Secondary Education & International Qualifications</h3>
+          <div class="entry-list">
+
+            <!-- School -->
+            <div class="entry-card">
+              <div class="entry-header">
+                <h4 class="entry-title">Prince of Wales Island International School</h4>
+                <span class="entry-period">September 2014 – July 2021</span>
+              </div>
+              <div class="entry-institution">Penang, Malaysia</div>
+              <p class="entry-desc">
+                Completed secondary education following the British National Curriculum, successfully graduating through
+                the International General Certificate of Secondary Education (IGCSE) and Advanced Level (A Levels)
+                programmes with a rigorous foundation in mathematics, advanced sciences, and analytical problem-solving.
+              </p>
+
+              <!-- All 3 International A-Levels Certifications explicitly detailed -->
+              <ul class="cert-list">
+                <li class="cert-item">
+                  <span class="cert-bullet">•</span>
+                  <span><strong>2021 Pearson Edexcel</strong>, International A levels</span>
+                </li>
+                <li class="cert-item">
+                  <span class="cert-bullet">•</span>
+                  <span><strong>2021 Oxford International AQA</strong>, General Certificate of Education</span>
+                </li>
+                <li class="cert-item">
+                  <span class="cert-bullet">•</span>
+                  <span><strong>2021 Cambridge Assessment International Education</strong>, General Certificate of
+                    Education</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Awards Section
+         ========================================================================== -->
+    <section class="section" id="awards">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 class="section-title">Awards</h2>
+          <div class="section-subtitle">Academic merit grants, foundation scholarships, and competition honors.</div>
+        </div>
+
+        <div class="awards-grid">
+
+          <!-- SGH Scholarship -->
+          <div class="award-card">
+            <div class="award-top">
+              <span class="award-year">2026</span>
+            </div>
+            <h3 class="award-title">SGH Scholarship</h3>
+            <div class="award-org">SGH International Scholarship Foundation (公益財団法人SGH財団留学生奨学)</div>
+          </div>
+
+          <!-- SEISEKI-YUSHUSHA I Scholarship -->
+          <div class="award-card">
+            <div class="award-top">
+              <span class="award-year">2026</span>
+            </div>
+            <h3 class="award-title">Ritsumeikan SEISEKI-YUSHUSHA I Scholarship</h3>
+            <div class="award-org">Conferred for top academic ranking and excellence (成績優秀者賞)</div>
+          </div>
+
+          <!-- NITORI Scholarship -->
+          <div class="award-card">
+            <div class="award-top">
+              <span class="award-year">2025</span>
+            </div>
+            <h3 class="award-title">NITORI Scholarship</h3>
+            <div class="award-org">Nitori International Scholarship Foundation (公益財団法人 似鳥国際奨学財団)</div>
+          </div>
+
+          <!-- IEEE Conference on Games First Place -->
+          <div class="award-card">
+            <div class="award-top">
+              <span class="award-year">2022</span>
+            </div>
+            <h3 class="award-title">First Place Award: DareFightingICE Sound Design</h3>
+            <div class="award-org">IEEE Conference on Games (IEEE CoG)</div>
+          </div>
+
+          <!-- 100% Tuition Reduction Scholarship -->
+          <div class="award-card">
+            <div class="award-top">
+              <span class="award-year">2022</span>
+            </div>
+            <h3 class="award-title">100% Tuition Reduction Scholarship</h3>
+            <div class="award-org">Ritsumeikan University</div>
+          </div>
+
+          <!-- JASSO Scholarship -->
+          <div class="award-card">
+            <div class="award-top">
+              <span class="award-year">2022</span>
+            </div>
+            <h3 class="award-title">JASSO Scholarship</h3>
+            <div class="award-org">Japan Student Services Organization (日本学生支援機構奨学金)</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Projects Section (Clean, Professional Typography)
+         ========================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <div class="section-subtitle">Research architectures and automated tools.</div>
+        </div>
+
+        <div class="projects-list">
+
+          <!-- Project 1: Chicken Age Estimation -->
+          <article class="project-item">
+            <div class="project-header">
+              <h3 class="project-item-title">
+                <a href="https://github.com/Adam-Kumar/chicken_age_estimator" target="_blank" rel="noopener noreferrer"
+                  class="project-title-link" title="Open chicken_age_estimator on GitHub">
+                  <span>Chicken Age Estimation — Multi-View Deep Learning</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" class="external-icon">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </h3>
+              <a href="https://github.com/Adam-Kumar/chicken_age_estimator" target="_blank" rel="noopener noreferrer"
+                class="project-github-link" title="View repository on GitHub"
+                aria-label="View Chicken Age Estimator on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2Z" />
+                </svg>
+              </a>
+            </div>
+            <p class="project-item-desc">
+              Deep learning system for estimating chicken drumette age (1–7 days post-slaughter) from dual-view images
+              using multi-view fusion strategies. Incorporates automated dataset cleaning, synchronous multi-angle
+              feature extraction, and regression modeling.
+            </p>
+            <div class="tags-row">
+              <span class="tag-badge">Deep Learning</span>
+              <span class="tag-badge">Computer Vision</span>
+              <span class="tag-badge">Multi-View Fusion</span>
+              <span class="tag-badge">Dataset Cleaning</span>
+              <span class="tag-badge">PyTorch</span>
+            </div>
+          </article>
+
+          <!-- Project 2: YouTube Music Auto-Liker -->
+          <article class="project-item">
+            <div class="project-header">
+              <h3 class="project-item-title">
+                <a href="https://github.com/Adam-Kumar/ytmusic_autoliker" target="_blank" rel="noopener noreferrer"
+                  class="project-title-link" title="Open ytmusic_autoliker on GitHub">
+                  <span>YouTube Music Playlist Auto-Liker</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" class="external-icon">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </h3>
+              <a href="https://github.com/Adam-Kumar/ytmusic_autoliker" target="_blank" rel="noopener noreferrer"
+                class="project-github-link" title="View repository on GitHub"
+                aria-label="View YouTube Music Auto-Liker on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2Z" />
+                </svg>
+              </a>
+            </div>
+            <p class="project-item-desc">
+              A client-side userscript that automatically likes every song in a YouTube Music playlist. This tool
+              enables users to bulk-transfer songs from any playlist into their personal "Liked Music" collection while
+              preserving track order and preventing accidental unliking.
+            </p>
+            <div class="tags-row">
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">Userscript</span>
+              <span class="tag-badge">DOM Automation</span>
+              <span class="tag-badge">MutationObserver</span>
+              <span class="tag-badge">Browser Extension</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Experience Section
+         ========================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 class="section-title">Experience</h2>
+        </div>
+
+        <div class="experience-list">
+
+          <!-- PoletoWin -->
+          <div class="entry-card">
+            <div class="entry-header">
+              <h3 class="entry-title">Game Development and Problem Solving Intern</h3>
+              <span class="entry-period">2026</span>
+            </div>
+            <div class="entry-institution">PoletoWin (PTW)</div>
+            <p class="entry-desc">
+              1-day intensive internship focused on software engineering problem solving, runtime debugging, and game
+              development analysis.
+            </p>
+          </div>
+
+          <!-- ISA Japan -->
+          <div class="entry-card">
+            <div class="entry-header">
+              <h3 class="entry-title">English Teaching</h3>
+              <span class="entry-period">2022 – 2026</span>
+            </div>
+            <div class="entry-institution">ISA Japan</div>
+            <p class="entry-desc">
+              Instructed English language and communication skills to Japanese students, utilizing native bilingual
+              fluency to facilitate clear instruction and cross-cultural understanding.
+            </p>
+          </div>
+
+          <!-- LEO Club -->
+          <div class="entry-card">
+            <div class="entry-header">
+              <h3 class="entry-title">English Teaching Volunteer</h3>
+              <span class="entry-period">2018 – 2019</span>
+            </div>
+            <div class="entry-institution">LEO Club International Malaysia</div>
+            <p class="entry-desc">
+              Volunteered in community education, teaching English literacy.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Skills & Languages Section
+         ========================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 class="section-title">Skills & Languages</h2>
+        </div>
+
+        <div class="skills-columns">
+
+          <!-- Technical Skills -->
+          <div class="skill-block">
+            <h3 class="skill-block-title">Core Competencies</h3>
+            <div class="skill-items-wrap">
+              <span class="skill-item-pill">Dataset Creation & Cleaning</span>
+              <span class="skill-item-pill">Machine Learning Models</span>
+              <span class="skill-item-pill">Multi-View Deep Learning</span>
+              <span class="skill-item-pill">Automation Systems & Scripts</span>
+              <span class="skill-item-pill">Python</span>
+              <span class="skill-item-pill">JavaScript</span>
+              <span class="skill-item-pill">DOM Automation</span>
+              <span class="skill-item-pill">PyTorch</span>
+              <span class="skill-item-pill">Computer Vision</span>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="skill-block">
+            <h3 class="skill-block-title">Languages</h3>
+            <table class="language-table">
+              <tbody>
+                <tr>
+                  <td>English</td>
+                  <td>Native</td>
+                </tr>
+                <tr>
+                  <td>Japanese (日本語)</td>
+                  <td>Native</td>
+                </tr>
+                <tr>
+                  <td>Malay (Bahasa Melayu)</td>
+                  <td>Conversational</td>
+                </tr>
+                <tr>
+                  <td>Mandarin (中文)</td>
+                  <td>Beginner</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Message Box Section
+         ========================================================================== -->
+    <section class="section" id="message">
+      <div class="container">
+
+        <div class="message-card">
+          <div class="message-header">
+            <h2 class="message-title">Send a Message</h2>
+            <p class="message-subtitle">
+              Have an academic inquiry, collaboration idea, or opportunity? Leave a note below.
+            </p>
+          </div>
+
+          <form id="contact-form" class="message-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="form-name" class="form-label">Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="Your Name" required>
+              </div>
+
+              <div class="form-field">
+                <label for="form-email" class="form-label">Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="your.email@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="form-message" class="form-label">Message</label>
+              <textarea id="form-message" class="form-textarea" rows="4" placeholder="Write your message here..."
+                required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Message</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Minimal Footer -->
+  <footer class="page-footer">
+    <div class="container"
+      style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+      <span>© 2026 Adam Kumar</span>
+      <span>Ritsumeikan University · Osaka, Japan</span>
+    </div>
+  </footer>
+
+  <!-- Subtle Notification Toast for 1-Click Copy -->
+  <div class="toast-msg" id="toast-msg" role="status" aria-live="polite">Copied to clipboard</div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
