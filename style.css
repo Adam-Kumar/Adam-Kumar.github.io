@@ -507,7 +507,7 @@ a:hover {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .entry-location {
@@ -518,14 +518,14 @@ a:hover {
 .entry-major {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
 .entry-desc {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 /* Sub-list for Certifications */
