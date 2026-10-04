@@ -277,9 +277,18 @@ if (document.readyState === 'loading') {
 /**
  * Language Switcher Implementation
  */
+let isLanguageToggling = false;
+
 function toggleLanguage() {
+  if (isLanguageToggling) return;
+  isLanguageToggling = true;
+
   const nextLang = currentLang === 'en' ? 'ja' : 'en';
   applyLanguage(nextLang);
+
+  setTimeout(() => {
+    isLanguageToggling = false;
+  }, 250);
 }
 window.toggleLanguage = toggleLanguage;
 
@@ -300,12 +309,11 @@ function initLanguageToggle() {
     applyLanguage('en');
   }
 
-  if (toggleBtn && !toggleBtn._hasLangListener) {
-    toggleBtn._hasLangListener = true;
-    toggleBtn.addEventListener('click', (e) => {
-      e.preventDefault();
+  if (toggleBtn) {
+    toggleBtn.onclick = (e) => {
+      if (e) e.preventDefault();
       toggleLanguage();
-    });
+    };
   }
 }
 

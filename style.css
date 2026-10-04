@@ -31,9 +31,11 @@
   --text-inverse: #FFFFFF;
 
   /* Refined Academic Accent */
-  --color-primary: #1E3A8A;       /* Deep Navy */
+  --color-primary: #1E3A8A;
+  /* Deep Navy */
   --color-primary-hover: #172554;
-  --color-accent: #2563EB;        /* Classic Royal Blue */
+  --color-accent: #2563EB;
+  /* Classic Royal Blue */
   --color-accent-subtle: #EFF6FF;
 
   /* Shadows (Subtle & Natural) */
@@ -52,7 +54,9 @@
 }
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -74,7 +78,10 @@ body {
 }
 
 /* Headings */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   color: var(--text-primary);
   font-weight: 700;
@@ -193,6 +200,7 @@ a:hover {
   .nav-right-actions {
     gap: 6px;
   }
+
   .nav-right-actions .btn {
     padding: 6px 10px;
     font-size: 0.8rem;
