@@ -691,31 +691,31 @@
             <div class="form-row">
               <div class="form-field">
                 <label for="form-name" class="form-label" data-i18n="msg.label_name">Name</label>
-                <input type="text" id="form-name" class="form-input" placeholder="Your Name"
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="Your Name"
                   data-i18n-placeholder="msg.placeholder_name" required>
               </div>
 
               <div class="form-field">
                 <label for="form-email" class="form-label" data-i18n="msg.label_email">Email</label>
-                <input type="email" id="form-email" class="form-input" placeholder="your.email@example.com"
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="your.email@example.com"
                   data-i18n-placeholder="msg.placeholder_email" required>
               </div>
             </div>
 
             <div class="form-field">
               <label for="form-message" class="form-label" data-i18n="msg.label_message">Message</label>
-              <textarea id="form-message" class="form-textarea" rows="4" placeholder="Write your message here..."
+              <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="Write your message here..."
                 data-i18n-placeholder="msg.placeholder_message" required></textarea>
             </div>
 
             <div class="form-actions">
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" id="form-submit-btn" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2">
                   <line x1="22" y1="2" x2="11" y2="13"></line>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
-                <span data-i18n="msg.btn_send">Send Message</span>
+                <span id="form-submit-text" data-i18n="msg.btn_send">Send Message</span>
               </button>
             </div>
           </form>

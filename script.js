@@ -134,6 +134,7 @@ const I18N = {
     'msg.label_message': 'Message',
     'msg.placeholder_message': 'Write your message here...',
     'msg.btn_send': 'Send Message',
+    'msg.btn_sending': 'Sending...',
 
     // Footer
     'footer.rights': '© 2026 Adam Kumar',
@@ -143,7 +144,11 @@ const I18N = {
     'toast.copied': 'Copied to clipboard',
     'toast.copy_item': 'Copied {label} to clipboard',
     'toast.copy_fail': 'Copy failed',
-    'toast.email_opening': 'Opening email client...'
+    'toast.email_opening': 'Opening email client...',
+    'toast.msg_sent': 'Message sent successfully!',
+    'toast.msg_fail': 'Failed to send message. Please try again.',
+    'toast.local_file_err': 'Testing requires a local web server (http://localhost), not direct file://',
+    'toast.activation_req': 'Activation email sent! Please check your inbox.'
   },
 
   ja: {
@@ -273,6 +278,7 @@ const I18N = {
     'msg.label_message': 'メッセージ本文',
     'msg.placeholder_message': 'メッセージをご記入ください...',
     'msg.btn_send': 'メッセージを送信する',
+    'msg.btn_sending': '送信中...',
 
     // Footer
     'footer.rights': '© 2026 アダム・クマール (Adam Kumar)',
@@ -282,7 +288,11 @@ const I18N = {
     'toast.copied': 'クリップボードにコピーしました',
     'toast.copy_item': '{label}をクリップボードにコピーしました',
     'toast.copy_fail': 'コピーに失敗しました',
-    'toast.email_opening': 'メールソフトを起動しています...'
+    'toast.email_opening': 'メールソフトを起動しています...',
+    'toast.msg_sent': 'メッセージが正常に送信されました！',
+    'toast.msg_fail': 'メッセージの送信に失敗しました。もう一度お試しください。',
+    'toast.local_file_err': 'ローカルテストにはWebサーバー(http://localhost)経由でのアクセスが必要です',
+    'toast.activation_req': '確認メールを送信しました。受信箱からフォームを有効化してください。'
   }
 };
 
@@ -425,35 +435,75 @@ function showToast(message) {
 }
 
 /**
- * Bottom Message Box Form Handler
+ * Bottom Message Box Form Handler (FormSubmit AJAX)
  */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  const submitBtn = document.getElementById('form-submit-btn') || form.querySelector('button[type="submit"]');
+  const submitText = document.getElementById('form-submit-text') || submitBtn?.querySelector('span');
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = document.getElementById('form-name').value.trim();
-    const email = document.getElementById('form-email').value.trim();
-    const message = document.getElementById('form-message').value.trim();
+
+    const nameInput = document.getElementById('form-name');
+    const emailInput = document.getElementById('form-email');
+    const messageInput = document.getElementById('form-message');
+
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
 
     if (!name || !email || !message) return;
 
-    const subject = encodeURIComponent(
-      currentLang === 'ja'
-        ? `お問い合わせ: ${name} 様 (CVサイトより)`
-        : `Message from ${name} via CV Website`
-    );
-    const body = encodeURIComponent(
-      currentLang === 'ja'
-        ? `差出人: ${name} (${email})\n\nメッセージ:\n${message}`
-        : `From: ${name} (${email})\n\nMessage:\n${message}`
-    );
-    window.location.href = `mailto:xadamok@gmail.com?subject=${subject}&body=${body}`;
+    // Check if opened as direct file:// (FormSubmit blocks file:// origins for security)
+    if (window.location.protocol === 'file:') {
+      showToast(I18N[currentLang]['toast.local_file_err'] || 'Testing requires a local web server (http://localhost), not direct file://');
+      return;
+    }
 
-    const toastText = I18N[currentLang]['toast.email_opening'] || 'Opening email client...';
-    showToast(toastText);
-    form.reset();
+    // Loading state
+    if (submitBtn) submitBtn.disabled = true;
+    if (submitText) submitText.textContent = I18N[currentLang]['msg.btn_sending'] || 'Sending...';
+
+    const subject = currentLang === 'ja'
+      ? `お問い合わせ: ${name} 様 (CVサイトより)`
+      : `Message from ${name} via CV Website`;
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/xadamok@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+          _subject: subject,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (result.message && /activation/i.test(result.message)) {
+        showToast(I18N[currentLang]['toast.activation_req'] || 'Activation email sent! Please check your inbox.');
+      } else if (response.ok && (result.success === 'true' || result.success === true || result.success !== 'false')) {
+        form.reset();
+        showToast(I18N[currentLang]['toast.msg_sent'] || 'Message sent successfully!');
+      } else {
+        showToast(I18N[currentLang]['toast.msg_fail'] || 'Failed to send message. Please try again.');
+      }
+    } catch (err) {
+      showToast(I18N[currentLang]['toast.msg_fail'] || 'Failed to send message. Please try again.');
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+      if (submitText) submitText.textContent = I18N[currentLang]['msg.btn_send'] || 'Send Message';
+    }
   });
 }
 
